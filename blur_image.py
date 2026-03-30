@@ -20,9 +20,9 @@ def blur(image):
             bottom = image.getPixel(x, y + 1) # Below
             sums = reduce(tripleSum, [oldP, left, right, top, bottom])
 #2
-        averages = tuple(map(lambda x: x // 5, sums))
+            averages = tuple(map(lambda x: x // 5, sums))
 #3
-        new.setPixel(x, y, averages)
+            new.setPixel(x, y, averages)
     return new
 def main():
     my_image = Image("smokey.gif")
